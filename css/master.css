@@ -1,0 +1,115 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wall {
+  position: absolute;
+  width: 5%;
+  background: linear-gradient(to right, #9de757 4%, #d5f97f 6%, #9de757 7%, #9de757 14%, #9de757 14%, #74bf2e 15%, #74bf2e 17%, #9de757 20%, #74bf2e 23%, #74bf2e 70%, #74bf2e 70%, #578220 71%, #578220 72%, #74bf2e 73%, #74bf2e 75%, #527e23 86%);
+  box-shadow: 5px 0px 3px #2e7d32 inset;
+  border: 1px solid #43A047;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: "Silkscreen", cursive;
+}
+body .container {
+  width: 100%;
+  height: 100vh;
+  border: 1px solid black;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+  overflow: hidden;
+  background-image: url(../img/bg.png);
+  background-size: contain;
+  -webkit-animation: bg 60s linear infinite;
+          animation: bg 60s linear infinite;
+  transition: 0.4s;
+}
+@-webkit-keyframes bg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+@keyframes bg {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+body .container .score {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  font-size: 30px;
+}
+body .container #bird {
+  margin-left: 10px;
+  transition: 0.4s;
+  width: 5%;
+  height: 9%;
+  position: absolute;
+  right: 80%;
+}
+body .container #bird img {
+  width: 100%;
+  height: 100%;
+}
+body .container #wall {
+  bottom: 0;
+}
+body .container #wall2 {
+  top: 0;
+}
+body .container .pop-up {
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30%;
+  background-color: transparent;
+  transition: 0.4s;
+  visibility: hidden;
+  padding: 10px;
+}
+body .container .pop-up .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid black;
+  background-color: rgb(52, 153, 39);
+  display: table;
+  margin: 0 auto;
+  cursor: pointer;
+  margin-top: 10px;
+}
+body .container .pop-up h1 {
+  font-size: 70px;
+}
+body .container .pop-up h1,
+body .container .pop-up .info {
+  text-align: center;
+  margin-top: 10px;
+}/*# sourceMappingURL=master.css.map */
